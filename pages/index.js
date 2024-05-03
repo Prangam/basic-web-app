@@ -3,8 +3,8 @@ import InputSearch from "./components/InputSearch";
 import TableProduct from "./components/TableProduct";
 import Filter from "./components/Filter";
 
-import ModalForm from "./components/ModalForm";
-import ModalDelete from "./components/ModalDelete";
+import ModalForm from "./components/Modal/ModalForm";
+import ModalDelete from "./components/Modal/ModalDelete";
 
 const Home = () => {
     const [isOpen, setIsOpen] = useState(false);
