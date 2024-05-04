@@ -1,11 +1,37 @@
-import React from "react";
+import React, { useState } from "react";
 import InputSearch from "./components/InputSearch";
 import Filter from "./components/Filter";
 import ConfigurationButton from "./components/ConfigurationButton";
 import GroupButton from "./components/GroupButton";
 import ProductTable from "./components/ProductTable";
+import ModalForm from "./components/Modal/ModalForm";
+import ModalDelete from "./components/Modal/ModalDelete";
 
 const Home = () => {
+    const [isOpenModalForm, setIsOpenModalForm] = useState(false);
+    const [isOpenModalDel, setIsOpenModalDel] = useState(false);
+
+    const handleModalForm = () => {
+        setIsOpenModalForm(true);
+    };
+
+    const handleCloseModalForm = () => {
+        setIsOpenModalForm(false);
+    };
+
+    const handleModalDel = () => {
+        setIsOpenModalDel(true);
+    };
+
+    const handleCloseModalDel = () => {
+        setIsOpenModalDel(false);
+    };
+
+    const confirmModalDelete = () => {
+        alert("Delete Successfully");
+        handleCloseModalDel();
+    };
+
     return (
         <section className="bg-gray-50 dark:bg-gray-900 py-3 sm:py-5">
             <div className="mx-auto max-w-screen-2xl px-4 lg:px-12">
@@ -27,15 +53,29 @@ const Home = () => {
                                 </div>
                             </div>
                             <div className="w-full md:w-auto flex flex-col md:flex-row mb-3 md:mb-0 items-stretch md:items-center justify-end md:space-x-3 flex-shrink-0">
-                                <GroupButton />
+                                <GroupButton
+                                    onClickModalForm={handleModalForm}
+                                />
                             </div>
                         </div>
                     </div>
                     <div className="overflow-x-auto">
-                        <ProductTable />
+                        <ProductTable
+                            onClickModalForm={handleModalForm}
+                            onClickModalDel={handleModalDel}
+                        />
                     </div>
                 </div>
             </div>
+            {isOpenModalForm && (
+                <ModalForm onCloseModalForm={handleCloseModalForm} />
+            )}
+            {isOpenModalDel && (
+                <ModalDelete
+                    onCloseModalDel={handleCloseModalDel}
+                    onConfirmModalDelete={confirmModalDelete}
+                />
+            )}
         </section>
     );
 };

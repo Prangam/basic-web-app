@@ -1,6 +1,6 @@
 import React from "react";
 
-const ProductTable = () => {
+const ProductTable = ({ onClickModalForm, onClickModalDel }) => {
     return (
         <>
             <table className="w-full text-sm text-left text-gray-500 dark:text-gray-400">
@@ -169,57 +169,19 @@ const ProductTable = () => {
                                 Active
                             </span>
                         </td>
-                        <td className="px-4 py-3">
-                            <button
-                                id="apple-imac-27-dropdown-button"
-                                type="button"
-                                data-dropdown-toggle="apple-imac-27-dropdown"
-                                className="inline-flex items-center p-1 text-sm font-medium text-center text-gray-500 hover:text-gray-800 hover:bg-gray-200 dark:hover:bg-gray-700 rounded-lg focus:outline-none dark:text-gray-400 dark:hover:text-gray-100"
+                        <td className="space-x-2 px-4 py-3">
+                            <a
+                                className="cursor-pointer"
+                                onClick={onClickModalForm}
                             >
-                                <svg
-                                    className="w-5 h-5"
-                                    aria-hidden="true"
-                                    fill="currentColor"
-                                    viewbox="0 0 20 20"
-                                    xmlns="http://www.w3.org/2000/svg"
-                                >
-                                    <path d="M6 10a2 2 0 11-4 0 2 2 0 014 0zM12 10a2 2 0 11-4 0 2 2 0 014 0zM16 12a2 2 0 100-4 2 2 0 000 4z" />
-                                </svg>
-                            </button>
-                            <div
-                                id="apple-imac-27-dropdown"
-                                className="hidden z-10 w-44 bg-white rounded divide-y divide-gray-100 shadow dark:bg-gray-700 dark:divide-gray-600"
+                                Edit
+                            </a> 
+                            <a
+                                className="cursor-pointer"
+                                onClick={onClickModalDel}
                             >
-                                <ul
-                                    className="py-1 text-sm text-gray-700 dark:text-gray-200"
-                                    aria-labelledby="apple-imac-27-dropdown-button"
-                                >
-                                    <li>
-                                        <a
-                                            href="#"
-                                            className="block py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
-                                        >
-                                            Show
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a
-                                            href="#"
-                                            className="block py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
-                                        >
-                                            Edit
-                                        </a>
-                                    </li>
-                                </ul>
-                                <div className="py-1">
-                                    <a
-                                        href="#"
-                                        className="block py-2 px-4 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white"
-                                    >
-                                        Delete
-                                    </a>
-                                </div>
-                            </div>
+                                Delete
+                            </a>
                         </td>
                     </tr>
                     <tr className="border-b dark:border-gray-600 hover:bg-gray-100 dark:hover:bg-gray-700">
@@ -268,57 +230,9 @@ const ProductTable = () => {
                                 Active
                             </span>
                         </td>
-                        <td className="px-4 py-3">
-                            <button
-                                id="apple-imac-20-dropdown-button"
-                                type="button"
-                                data-dropdown-toggle="apple-imac-20-dropdown"
-                                className="inline-flex items-center p-1 text-sm font-medium text-center text-gray-500 hover:text-gray-800 hover:bg-gray-200 dark:hover:bg-gray-700 rounded-lg focus:outline-none dark:text-gray-400 dark:hover:text-gray-100"
-                            >
-                                <svg
-                                    className="w-5 h-5"
-                                    aria-hidden="true"
-                                    fill="currentColor"
-                                    viewbox="0 0 20 20"
-                                    xmlns="http://www.w3.org/2000/svg"
-                                >
-                                    <path d="M6 10a2 2 0 11-4 0 2 2 0 014 0zM12 10a2 2 0 11-4 0 2 2 0 014 0zM16 12a2 2 0 100-4 2 2 0 000 4z" />
-                                </svg>
-                            </button>
-                            <div
-                                id="apple-imac-20-dropdown"
-                                className="hidden z-10 w-44 bg-white rounded divide-y divide-gray-100 shadow dark:bg-gray-700 dark:divide-gray-600"
-                            >
-                                <ul
-                                    className="py-1 text-sm text-gray-700 dark:text-gray-200"
-                                    aria-labelledby="apple-imac-20-dropdown-button"
-                                >
-                                    <li>
-                                        <a
-                                            href="#"
-                                            className="block py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
-                                        >
-                                            Show
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a
-                                            href="#"
-                                            className="block py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
-                                        >
-                                            Edit
-                                        </a>
-                                    </li>
-                                </ul>
-                                <div className="py-1">
-                                    <a
-                                        href="#"
-                                        className="block py-2 px-4 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white"
-                                    >
-                                        Delete
-                                    </a>
-                                </div>
-                            </div>
+                        <td className="space-x-2 px-4 py-3">
+                            <a>Edit</a>
+                            <a>Delete</a>
                         </td>
                     </tr>
                     <tr className="border-b dark:border-gray-600 hover:bg-gray-100 dark:hover:bg-gray-700">
@@ -367,255 +281,9 @@ const ProductTable = () => {
                                 Inactive
                             </span>
                         </td>
-                        <td className="px-4 py-3">
-                            <button
-                                id="apple-iphone-14-dropdown-button"
-                                type="button"
-                                data-dropdown-toggle="apple-iphone-14-dropdown"
-                                className="inline-flex items-center p-1 text-sm font-medium text-center text-gray-500 hover:text-gray-800 hover:bg-gray-200 dark:hover:bg-gray-700 rounded-lg focus:outline-none dark:text-gray-400 dark:hover:text-gray-100"
-                            >
-                                <svg
-                                    className="w-5 h-5"
-                                    aria-hidden="true"
-                                    fill="currentColor"
-                                    viewbox="0 0 20 20"
-                                    xmlns="http://www.w3.org/2000/svg"
-                                >
-                                    <path d="M6 10a2 2 0 11-4 0 2 2 0 014 0zM12 10a2 2 0 11-4 0 2 2 0 014 0zM16 12a2 2 0 100-4 2 2 0 000 4z" />
-                                </svg>
-                            </button>
-                            <div
-                                id="apple-iphone-14-dropdown"
-                                className="hidden z-10 w-44 bg-white rounded divide-y divide-gray-100 shadow dark:bg-gray-700 dark:divide-gray-600"
-                            >
-                                <ul
-                                    className="py-1 text-sm text-gray-700 dark:text-gray-200"
-                                    aria-labelledby="apple-iphone-14-dropdown-button"
-                                >
-                                    <li>
-                                        <a
-                                            href="#"
-                                            className="block py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
-                                        >
-                                            Show
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a
-                                            href="#"
-                                            className="block py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
-                                        >
-                                            Edit
-                                        </a>
-                                    </li>
-                                </ul>
-                                <div className="py-1">
-                                    <a
-                                        href="#"
-                                        className="block py-2 px-4 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white"
-                                    >
-                                        Delete
-                                    </a>
-                                </div>
-                            </div>
-                        </td>
-                    </tr>
-                    <tr className="border-b dark:border-gray-600 hover:bg-gray-100 dark:hover:bg-gray-700">
-                        <td className="px-4 py-3 w-4">
-                            <div className="flex items-center">
-                                <input
-                                    id="checkbox-table-search-1"
-                                    type="checkbox"
-                                    onclick="event.stopPropagation()"
-                                    className="w-4 h-4 text-primary-600 bg-gray-100 rounded border-gray-300 focus:ring-primary-500 dark:focus:ring-primary-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
-                                />
-                                <label
-                                    for="checkbox-table-search-1"
-                                    className="sr-only"
-                                >
-                                    checkbox
-                                </label>
-                            </div>
-                        </td>
-                        <th
-                            scope="row"
-                            className="px-4 py-3 font-medium text-gray-900 whitespace-nowrap dark:text-white flex items-center"
-                        >
-                            <img
-                                src="https://flowbite.s3.amazonaws.com/blocks/application-ui/devices/apple-ipad-air.png"
-                                alt="iMac Front Image"
-                                className="h-8 w-auto mr-3"
-                            />
-                            Apple iPad Air
-                        </th>
-                        <td className="px-4 py-3">Tablet</td>
-                        <td className="px-4 py-3 font-medium text-gray-900 whitespace-nowrap dark:text-white">
-                            Apple
-                        </td>
-                        <td className="px-4 py-3 font-medium text-gray-900 whitespace-nowrap dark:text-white">
-                            $1199
-                        </td>
-                        <td className="px-4 py-3 font-medium text-gray-900 whitespace-nowrap dark:text-white">
-                            4576
-                        </td>
-                        <td className="px-4 py-3 font-medium text-gray-900 whitespace-nowrap dark:text-white">
-                            90
-                        </td>
-                        <td className="px-4 py-3 whitespace-nowrap">
-                            <span className="bg-gray-100 text-gray-800 text-xs font-medium mr-2 px-2.5 py-0.5 rounded dark:bg-gray-700 dark:text-gray-300">
-                                Inactive
-                            </span>
-                        </td>
-                        <td className="px-4 py-3">
-                            <button
-                                id="apple-ipad-air-dropdown-button"
-                                type="button"
-                                data-dropdown-toggle="apple-ipad-air-dropdown"
-                                className="inline-flex items-center p-1 text-sm font-medium text-center text-gray-500 hover:text-gray-800 hover:bg-gray-200 dark:hover:bg-gray-700 rounded-lg focus:outline-none dark:text-gray-400 dark:hover:text-gray-100"
-                            >
-                                <svg
-                                    className="w-5 h-5"
-                                    aria-hidden="true"
-                                    fill="currentColor"
-                                    viewbox="0 0 20 20"
-                                    xmlns="http://www.w3.org/2000/svg"
-                                >
-                                    <path d="M6 10a2 2 0 11-4 0 2 2 0 014 0zM12 10a2 2 0 11-4 0 2 2 0 014 0zM16 12a2 2 0 100-4 2 2 0 000 4z" />
-                                </svg>
-                            </button>
-                            <div
-                                id="apple-ipad-air-dropdown"
-                                className="hidden z-10 w-44 bg-white rounded divide-y divide-gray-100 shadow dark:bg-gray-700 dark:divide-gray-600"
-                            >
-                                <ul
-                                    className="py-1 text-sm text-gray-700 dark:text-gray-200"
-                                    aria-labelledby="apple-ipad-air-dropdown-button"
-                                >
-                                    <li>
-                                        <a
-                                            href="#"
-                                            className="block py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
-                                        >
-                                            Show
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a
-                                            href="#"
-                                            className="block py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
-                                        >
-                                            Edit
-                                        </a>
-                                    </li>
-                                </ul>
-                                <div className="py-1">
-                                    <a
-                                        href="#"
-                                        className="block py-2 px-4 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white"
-                                    >
-                                        Delete
-                                    </a>
-                                </div>
-                            </div>
-                        </td>
-                    </tr>
-                    <tr className="border-b dark:border-gray-600 hover:bg-gray-100 dark:hover:bg-gray-700">
-                        <td className="px-4 py-3 w-4">
-                            <div className="flex items-center">
-                                <input
-                                    id="checkbox-table-search-1"
-                                    type="checkbox"
-                                    onclick="event.stopPropagation()"
-                                    className="w-4 h-4 text-primary-600 bg-gray-100 rounded border-gray-300 focus:ring-primary-500 dark:focus:ring-primary-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
-                                />
-                                <label
-                                    for="checkbox-table-search-1"
-                                    className="sr-only"
-                                >
-                                    checkbox
-                                </label>
-                            </div>
-                        </td>
-                        <th
-                            scope="row"
-                            className="px-4 py-3 font-medium text-gray-900 whitespace-nowrap dark:text-white flex items-center"
-                        >
-                            <img
-                                src="https://flowbite.s3.amazonaws.com/blocks/application-ui/devices/xbox-series-s.png"
-                                alt="iMac Front Image"
-                                className="h-8 w-auto mr-3"
-                            />
-                            Xbox Series S
-                        </th>
-                        <td className="px-4 py-3">Gaming/Console</td>
-                        <td className="px-4 py-3 font-medium text-gray-900 whitespace-nowrap dark:text-white">
-                            Microsoft
-                        </td>
-                        <td className="px-4 py-3 font-medium text-gray-900 whitespace-nowrap dark:text-white">
-                            $299
-                        </td>
-                        <td className="px-4 py-3 font-medium text-gray-900 whitespace-nowrap dark:text-white">
-                            56
-                        </td>
-                        <td className="px-4 py-3 font-medium text-gray-900 whitespace-nowrap dark:text-white">
-                            3087
-                        </td>
-                        <td className="px-4 py-3 whitespace-nowrap">
-                            <span className="bg-yellow-100 text-yellow-800 text-xs font-medium mr-2 px-2.5 py-0.5 rounded dark:bg-yellow-900 dark:text-yellow-300">
-                                Pending
-                            </span>
-                        </td>
-                        <td className="px-4 py-3">
-                            <button
-                                id="xbox-series-s-dropdown-button"
-                                type="button"
-                                data-dropdown-toggle="xbox-series-s-dropdown"
-                                className="inline-flex items-center p-1 text-sm font-medium text-center text-gray-500 hover:text-gray-800 hover:bg-gray-200 dark:hover:bg-gray-700 rounded-lg focus:outline-none dark:text-gray-400 dark:hover:text-gray-100"
-                            >
-                                <svg
-                                    className="w-5 h-5"
-                                    aria-hidden="true"
-                                    fill="currentColor"
-                                    viewbox="0 0 20 20"
-                                    xmlns="http://www.w3.org/2000/svg"
-                                >
-                                    <path d="M6 10a2 2 0 11-4 0 2 2 0 014 0zM12 10a2 2 0 11-4 0 2 2 0 014 0zM16 12a2 2 0 100-4 2 2 0 000 4z" />
-                                </svg>
-                            </button>
-                            <div
-                                id="xbox-series-s-dropdown"
-                                className="hidden z-10 w-44 bg-white rounded divide-y divide-gray-100 shadow dark:bg-gray-700 dark:divide-gray-600"
-                            >
-                                <ul
-                                    className="py-1 text-sm text-gray-700 dark:text-gray-200"
-                                    aria-labelledby="xbox-series-s-dropdown-button"
-                                >
-                                    <li>
-                                        <a
-                                            href="#"
-                                            className="block py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
-                                        >
-                                            Show
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a
-                                            href="#"
-                                            className="block py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
-                                        >
-                                            Edit
-                                        </a>
-                                    </li>
-                                </ul>
-                                <div className="py-1">
-                                    <a
-                                        href="#"
-                                        className="block py-2 px-4 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white"
-                                    >
-                                        Delete
-                                    </a>
-                                </div>
-                            </div>
+                        <td className="space-x-2 px-4 py-3">
+                            <a>Edit</a>
+                            <a>Delete</a>
                         </td>
                     </tr>
                 </tbody>
