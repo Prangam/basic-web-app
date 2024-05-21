@@ -1,6 +1,6 @@
 import React from 'react'
 
-const GroupButton = ({onClickModalForm}) => {
+const GroupButton = ({onClickModalForm}) => { 
   return (
     <div className="grid grid-cols-2 gap-4">
         <div className="flex-shrink-0 flex flex-row items-center space-x-3 justify-end">
@@ -34,7 +34,7 @@ const GroupButton = ({onClickModalForm}) => {
     >
       <svg
         className="h-3.5 w-3.5 mr-2"
-        fill="currentColor"
+        fill="currentColor" 
         viewbox="0 0 20 20"
         xmlns="http://www.w3.org/2000/svg"
         aria-hidden="true"
